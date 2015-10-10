@@ -6,7 +6,7 @@
         <meta name="description" content="${meta_description}">
         <meta name="author" content="${meta_author}">
         <title>${meta_title}</title>
-        <link rel="icon" href="./api.php?call=files&amp;cat=content&amp;id=favicon.ico" type="image/x-icon"/>
+        <link rel="icon" href="./api.php?call=files&amp;cat=content&amp;id=gemini.jpg" type="image/x-icon"/>
         <style type="text/css">
         </style>
         ${css}
@@ -14,7 +14,10 @@
     </head>
     <body>
         <div class="container">
-            show me this
+            ${content_header}
+            ${content_menu}
+            ${content}
+            ${content_footer}
         </div>
     </body>
 </html>

@@ -21,7 +21,11 @@ class default_page extends \SYSTEM\PAGE\Page {
         if(!$_escaped_fragment_){
             $vars['js'] = $this->js();}
         $vars['css'] = $this->css();
-        $vars = array_merge($vars, \SYSTEM\PAGE\text::tag('yeminy'));
+        $vars['content_header'] = \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_page/tpl/content_header.tpl'));
+        $vars['content_menu'] = \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_page/tpl/content_menu.tpl'));
+        $vars['content'] = \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_page/tpl/content.tpl'));
+        $vars['content_footer'] = \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_page/tpl/content_footer.tpl'));
+        $vars = array_merge($vars, \SYSTEM\PAGE\text::tag('meta'));
         return \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_page/tpl/default_page.tpl'), $vars);
     }
 }
