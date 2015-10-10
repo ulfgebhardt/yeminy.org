@@ -7,6 +7,7 @@
             <li><a href="#!start;tag.conspiricy">Conspiricy</a></li>
             <li><a href="#!start;tag.science">Science</a></li>
             <li><a href="#!start;tag.programming">Programming</a></li>
+            <li><a href="#!start;tag.concept">Concept</a></li>
             <button style="float: right; margin-top: 7px; margin-right: 7px; padding: 2px;"class="btn btn-info" id="nav_search_btn">los geht's!</button>
             <input style="float: right; margin-top: 7px; margin-right: 7px;" type="text" id="nav_search" placeholder="Suchbegriff eingeben">
         </ul>
