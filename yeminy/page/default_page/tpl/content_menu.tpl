@@ -1,7 +1,7 @@
 <div id="div_menu_row" class="row-fluid row_border_top row_centered">
     <div class="div_menu tabbable col-md-12">
         <ul class="nav nav-tabs" id="tabs_user_list">                  
-            <li class="active"><a href="#!start">Neu</a></li>
+            <li class="active"><a href="#">Neu</a></li>
             <li><a href="#!start;tag.kochen">Kochen</a></li>
             <li><a href="#!start;tag.poesie">Poesie</a></li>
             <li><a href="#!start;tag.conspiricy">Conspiricy</a></li>

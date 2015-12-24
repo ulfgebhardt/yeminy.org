@@ -1,3 +1,8 @@
 #div_header{
     height: 250px;
 }
+
+.container{
+    background-color: white;
+    box-shadow: 2px 0 15px 0px rgba(31, 73, 125, 0.8), -2px 0 8px 0px rgba(31, 73, 125, 0.8);
+}
