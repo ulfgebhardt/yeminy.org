@@ -5,7 +5,6 @@ class default_article extends \SYSTEM\PAGE\Page {
         $this->id = $id;}
 
     public function html(){
-        $element = \SYSTEM\PAGE\text::get_adv($this->id);
-        return SYSTEM\PAGE\replace::replace(article::full($element), \SYSTEM\PAGE\text::tag('time'));
+        return SYSTEM\PAGE\replace::replace(article::full($this->id), \SYSTEM\PAGE\text::tag('time'));
     }
 }

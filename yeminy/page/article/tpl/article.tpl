@@ -8,13 +8,10 @@
     <div style="clear: both;"></div>
     <div style="border-top: solid 1px black; width: 100%;"></div>
     <h2>${id}</h2>
+    <h5>Tags: ${tags}</h5>
     <br>
     ${text}
     <p style="float: right; font-size: 10pt; margin-top: 7px;">Veröffentlicht: ${published}</p>
-    <br>
-    <br>
-    <br>
-    <div class="fb-comments" data-href="http://www.neopolimatrix.eu/#!article;article.${id}" data-numposts="20" data-colorscheme="light"></div>
 </div>
 <br>
 <br>

@@ -4,7 +4,7 @@ class default_list extends \SYSTEM\PAGE\Page {
     public function __construct($tag = null) {
         $this->tag = $tag;}
     public static function js(){
-        return array(   \SYSTEM\WEBPATH(new PPAGE(),'default_list/js/default_list.js'));}
+        return array(   new PPAGE('default_list/js/default_list.js'));}
     
     public function html(){
         $vars = array();
@@ -14,6 +14,6 @@ class default_list extends \SYSTEM\PAGE\Page {
         foreach($elements as $element){
             $vars['list'] .= article::preview($element);}
         $vars = array_merge($vars, \SYSTEM\PAGE\text::tag('time'));
-        return SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_list/tpl/default_list.tpl'), $vars);
+        return SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_list/tpl/default_list.tpl'))->SERVERPATH(), $vars);
     }
 }

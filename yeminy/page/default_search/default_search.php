@@ -12,6 +12,6 @@ class default_search extends \SYSTEM\PAGE\Page {
         foreach($elements as $element){
             $vars['search'] .= article::preview($element);}
         $vars = array_merge($vars, \SYSTEM\PAGE\text::tag('time'));
-        return SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_search/tpl/search.tpl'), $vars);
+        return SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_search/tpl/search.tpl'))->SERVERPATH(), $vars);
     }
 }

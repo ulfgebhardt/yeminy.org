@@ -1,18 +1,18 @@
 <?php
 class default_page extends \SYSTEM\PAGE\Page {
     private function js(){        
-        return  \SYSTEM\HTML\html::script(\LIB\lib_jquery::js()).
-                \SYSTEM\HTML\html::script(\LIB\lib_bootstrap::js()).
-                \SYSTEM\HTML\html::script(\LIB\lib_system::js()).
-                \SYSTEM\HTML\html::script(\LIB\lib_jqbootstrapvalidation::js()).
-                \SYSTEM\HTML\html::script(\SYSTEM\WEBPATH(new PPAGE(),'default_page/js/default_page.js'));
+        return  \SYSTEM\HTML\html::script(\LIB\lib_jquery::js()->WEBPATH()).
+                \SYSTEM\HTML\html::script(\LIB\lib_bootstrap::js()->WEBPATH()).
+                \SYSTEM\HTML\html::script(\LIB\lib_system::js()->WEBPATH()).
+                \SYSTEM\HTML\html::script(\LIB\lib_jqbootstrapvalidation::js()->WEBPATH()).
+                \SYSTEM\HTML\html::script((new PPAGE('default_page/js/default_page.js'))->WEBPATH());
     }
     
     private function css(){  
-        return  \SYSTEM\HTML\html::link(\LIB\lib_bootstrap::css()).
-                \SYSTEM\HTML\html::link(\LIB\lib_animate::css()).
-                \SYSTEM\HTML\html::link(\LIB\lib_system::css()).
-                \SYSTEM\HTML\html::link(\SYSTEM\WEBPATH(new PPAGE(),'default_page/css/default_page.css'));
+        return  \SYSTEM\HTML\html::link(\LIB\lib_bootstrap::css()->WEBPATH()).
+                \SYSTEM\HTML\html::link(\LIB\lib_animate::css()->WEBPATH()).
+                \SYSTEM\HTML\html::link(\LIB\lib_system::css()->WEBPATH()).
+                \SYSTEM\HTML\html::link((new PPAGE('default_page/css/default_page.css'))->WEBPATH());
     }
     
     public function html($_escaped_fragment_ = NULL){
@@ -21,11 +21,11 @@ class default_page extends \SYSTEM\PAGE\Page {
         if(!$_escaped_fragment_){
             $vars['js'] = $this->js();}
         $vars['css'] = $this->css();
-        $vars['content_header'] = \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_page/tpl/content_header.tpl'));
-        $vars['content_menu'] = \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_page/tpl/content_menu.tpl'));
-        $vars['content'] = \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_page/tpl/content.tpl'));
-        $vars['content_footer'] = \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_page/tpl/content_footer.tpl'));
+        $vars['content_header'] = \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_page/tpl/content_header.tpl'))->SERVERPATH());
+        $vars['content_menu'] = \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_page/tpl/content_menu.tpl'))->SERVERPATH());
+        $vars['content'] = \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_page/tpl/content.tpl'))->SERVERPATH());
+        $vars['content_footer'] = \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_page/tpl/content_footer.tpl'))->SERVERPATH());
         $vars = array_merge($vars, \SYSTEM\PAGE\text::tag('meta'));
-        return \SYSTEM\PAGE\replace::replaceFile(SYSTEM\SERVERPATH(new PPAGE(),'default_page/tpl/default_page.tpl'), $vars);
+        return \SYSTEM\PAGE\replace::replaceFile((new PPAGE('default_page/tpl/default_page.tpl'))->SERVERPATH(), $vars);
     }
 }
