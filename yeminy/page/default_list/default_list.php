@@ -1,11 +1,23 @@
 <?php
-class default_list extends \SYSTEM\PAGE\Page {
+class default_list implements \SYSTEM\PAGE\Page {
     var $tag = null;
     public function __construct($tag = null) {
         $this->tag = $tag;}
+
+    public static function title(){
+        return null;
+    }
+    public static function meta(){
+        return array();
+    }
+
     public static function js(){
         return array(   new PPAGE('default_list/js/default_list.js'));}
     
+    public static function css(){
+        return array();
+    }
+
     public function html(){
         $vars = array();
         $vars['title'] = $this->tag ? ucfirst($this->tag) : 'Neuheiten';

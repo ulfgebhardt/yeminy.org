@@ -1,8 +1,4 @@
 <?php
-require_once 'lib/autoload.inc';                                                //SYSTEM Classes
-require_once 'yeminy/autoload.inc';                                         //Project Classes
-require_once '/home/web/web/config/get_config.php';
-
-\SYSTEM\system::start(\WEBCRAFT\get_config(dirname(__FILE__)));
+require_once 'index.inc';
 
 echo \SYSTEM\SQL\setup::install();
